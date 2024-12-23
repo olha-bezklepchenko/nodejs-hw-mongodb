@@ -28,7 +28,7 @@ export const getContactsController = async (req, res, next) => {
     sortBy,
     filter,
   });
-  res.status(200).json({
+  res.json({
     status: 200,
     message: 'Successfully found contacts!',
     data: contacts,
@@ -42,7 +42,7 @@ export const getContactByIdController = async (req, res, next) => {
     throw createHttpError(404, 'Contact not found');
   }
 
-  res.status(200).json({
+  res.json({
     status: 200,
     message: `Successfully found contact with id ${contactId}!`,
     data: contact,
@@ -64,7 +64,7 @@ export const createContactController = async (req, res, next) => {
     req.user._id,
   );
 
-  res.status(201).json({
+  res.json({
     status: 201,
     message: 'Successfully created a contact!',
     data: contact,
@@ -92,7 +92,7 @@ export const patchContactController = async (req, res, next) => {
     next(createHttpError(404, 'Contact not found'));
     return;
   }
-  res.status(200).json({
+  res.json({
     status: 200,
     message: `Successfully patched a contact!`,
     data: result.contact,
