@@ -83,7 +83,7 @@
           },
           {
             "in": "query",
-            "name": "filter.type",
+            "name": "type",
             "schema": {
               "type": "string",
               "enum": [
@@ -97,7 +97,7 @@
           },
           {
             "in": "query",
-            "name": "filter.isFavourite",
+            "name": "isFavourite",
             "schema": {
               "type": "boolean",
               "example": true
@@ -248,7 +248,7 @@
           }
         },
         "responses": {
-          "200": {
+          "201": {
             "description": "Successfully created a contact",
             "content": {
               "application/json": {
@@ -262,7 +262,7 @@
                   "properties": {
                     "status": {
                       "type": "integer",
-                      "example": 200
+                      "example": 201
                     },
                     "message": {
                       "type": "string",
