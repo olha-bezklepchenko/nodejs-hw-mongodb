@@ -42,7 +42,7 @@ requestBody:
             type: string
             format: binary
 responses:
-  '200':
+  '201':
     description: 'Successfully created a contact'
     content:
       application/json:
@@ -55,7 +55,7 @@ responses:
           properties:
             status:
               type: integer
-              example: 200
+              example: 201
             message:
               type: string
               example: Successfully created a contact!
